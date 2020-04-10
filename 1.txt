@@ -29,3 +29,15 @@ celokupni skup podataka.
 Nedostatak je to sto neke podatke mozda nikada necemo
 iskoristiti za trening ili za valdiaciju, a neke koristimo vise puta za trening
 ili za validaciju.
+
+
+
+3.
+Linearna separabilnost je osobina dva seta podataka gde su ta dva seta podataka
+linearno separabilna ukoliko postoji neka prava ili ravan koja te podatke deli
+na dva dela. Tacnije ukoliko se ravan ili prava provuce kroz te podatke, jedan skup
+podataka bi bio sa jedne strane ravni dok bi drugi bio sa druge.
+Kako je iris.csv skolski primer data seta za klasifikaciju, plotovanje moze da prikaze
+da je iris-setosa skup podataka linearno separabilna sa druga dva seta podataka, dok oni
+medjusobno nisu. Linearna separabilnost se takodje moze dokazati klasifikacijom podataka
+od 100% to jest ukoliko uspemo da klasifikujemo podatke pomocu support vector machine.
