@@ -1,0 +1,31 @@
+1.
+a) Koja je razlika između k-fold, leave one out i random subsampling cross
+validation algoritama?
+
+U K-fold algoritmu celokupni skup podataka se deli na K podskupova
+jednakih velicina, deli se na training i validation sets. Training set sluzi
+za treniranje algoritma dok validation set sluzi testiranju tj. validaciji
+algoritma. Treniranje se vrsi sa K-1 podskupa celokupnih podataka
+a testiranje sa jednim. U prvoj iteraciji se koristi prvi podskup kao
+test/validation skup u drugoj drugi itd... Na kraju svake iteracije treninga sa
+K-1 podskupova podataka se radi test sa jednim podskupom. Na kraju poslednje
+Iteracije se radi prosek svih testova izvrsenih u K iteracija.
+Ovime se dobija veca preciznost pri proceni algoritma ali je njemu potrebno
+mnogo vise vremena za izvrsavanje, preciznije K puta vise u odnosu na
+algoritme koji vrse trening i test u jednoj iteraciji.
+
+U Leave one out algoritmu biramo samo jedan data point za testiranje i ostalih
+N-1 data pointa za treniranje algoritma, vrsi se N iteracija u kojima se
+trenira i testira algoritam u i-toj iteraciji koristimo i-ti data point za test.
+Na kraju N. iteracije se racuna prosek svih gresaka tokom N iteracija.
+Ovaj metod je dobar za validaciju ali zahteva puno vrmena za obradu.
+
+U Random subsampling algoritmu arbitrarno delimo celokupni skup podataka na
+nekoliko pod skupova i onda te podskupove podelimo na training data i na
+validation data. Na kraju se racuna prosek dobijenih gresaka.
+Prednost ovog algoritma u odnosu na npr. K-fold algoritam
+je to sto broj iteracija ne zavisi od toga na koliko smo podskupova podelili
+celokupni skup podataka.
+Nedostatak je to sto neke podatke mozda nikada necemo
+iskoristiti za trening ili za valdiaciju, a neke koristimo vise puta za trening
+ili za validaciju.
